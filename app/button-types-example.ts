@@ -16,12 +16,7 @@ export class ButtonTypesExample {
   }
 
   clicked() {
-    this.isNotifyClicked = !this.isNotifyClicked;
-
-    // to simulate pending API call
-    // setTimeout(() => {
-    //   this.isNotifyClicked = !this.isNotifyClicked;
-    // }, 2000);
+    if (!this.isNotifyClicked) this.isNotifyClicked = !this.isNotifyClicked;
   }
 }
 
