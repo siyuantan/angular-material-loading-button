@@ -1,11 +1,6 @@
 <h3>Bouncing dots loader button</h3>
 <div class="button-row">
-  <button
-    mat-raised-button
-    color="primary"
-    class="notify-button"
-    (click)="clicked()"
-  >
+  <button mat-raised-button [class]="className" (click)="clicked()">
     <ng-container *ngIf="!isNotifyClicked">NOTIFY</ng-container>
     <ng-container *ngIf="isNotifyClicked">
       <div class="three-dots-loader">

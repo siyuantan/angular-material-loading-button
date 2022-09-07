@@ -1,4 +1,3 @@
-import { ViewChild } from '@angular/core';
 import { Component } from '@angular/core';
 
 /**
@@ -10,13 +9,18 @@ import { Component } from '@angular/core';
   styleUrls: ['button-types-example.css'],
 })
 export class ButtonTypesExample {
-  isNotifyClicked = false;
+  isNotifyClicked: boolean;
+  className = 'notify-button';
+
   ngOnInit() {
     this.isNotifyClicked = false;
   }
 
   clicked() {
-    if (!this.isNotifyClicked) this.isNotifyClicked = !this.isNotifyClicked;
+    if (!this.isNotifyClicked) {
+      this.isNotifyClicked = !this.isNotifyClicked;
+      this.className = 'notify-button loading';
+    }
   }
 }
 
