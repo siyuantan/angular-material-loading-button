@@ -1,0 +1,22 @@
+<h3>Bouncing dots loader button</h3>
+<div class="button-row">
+  <button
+    mat-raised-button
+    color="primary"
+    class="notify-button"
+    (click)="clicked()"
+  >
+    <ng-container *ngIf="!isNotifyClicked">NOTIFY</ng-container>
+    <ng-container *ngIf="isNotifyClicked">
+      <div class="three-dots-loader">
+        <div id="three-dots-1"></div>
+        <div id="three-dots-2"></div>
+        <div id="three-dots-3"></div>
+      </div>
+    </ng-container>
+  </button>
+</div>
+
+<!-- Copyright 2018 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
